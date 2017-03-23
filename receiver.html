@@ -1,3 +1,46 @@
+<html lang="en" ng-app="gameApp">
+<head>
+    <link rel="stylesheet" type="text/css" href="App/css/centipede.css">
+    <title>Centipede</title>
+</head>
+<body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
+    <div data-ng-if="!instructionsDisplayed" class="instructions">
+        <h2>Instructions</h2>
+        <p>Shoot everything and stay alive</p>
+        <p>Arrow Keys to move</p>
+        <p>Space bar to fire</p>
+        <br>
+        <p>Press any key to start</p>
+    </div>
+    <div data-ng-if="instructionsDisplayed" centipede-game/>
+
+    <script src="App/lib/angular.min.js"></script>
+    <script src="App/gameApp.js"></script>
+    <script src="App/js/constants/global-settings.js"></script>
+    <script src="App/js/constants/character-state.js"></script>
+    <script src="App/js/constants/character-direction.js"></script>
+    <script src="App/js/constants/game-state.js"></script>
+    <script src="App/js/constants/sprite.js"></script>
+    <script src="App/js/constants/board-location.js"></script>
+    <script src="App/js/constants/coordinate-system.js"></script>
+    <script src="App/js/services/utils.js"></script>
+    <script src="App/js/services/key-press-handler.js"></script>
+    <script src="App/js/services/graphics-engine.js"></script>
+    <script src="App/js/services/game-board.js"></script>
+    <script src="App/js/services/game.js"></script>
+    <script src="App/js/services/render.js"></script>
+    <script src="App/js/services/score-marker.js"></script>
+    <script src="App/js/services/player.js"></script>
+    <script src="App/js/services/spider.js"></script>
+    <script src="App/js/services/bullet.js"></script>
+    <script src="App/js/services/centipede.js"></script>
+    <script src="App/js/services/flea.js"></script>
+    <script src="App/js/services/snail.js"></script>
+    <script src="App/js/services/game-state.js"></script>
+</body>
+</html>
+
+
 <!--
 Copyright (C) 2014 Google Inc. All Rights Reserved.
 
@@ -12,7 +55,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
--->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -100,3 +143,4 @@ limitations under the License.
     </script>
   </body>
 </html>
+-->
