@@ -94,14 +94,7 @@ limitations under the License.
       // display the message from the sender
       displayText(event.data);
       //keyPressHandlerService.keyPress == event.data;
-
-      document.addEventListener('keydown', function(ev){
-        console.log(e.keyCode);
-      });
-
-      var e = new KeyboardEvent('keydown', {'key': 'ArrowLeft', 'code': "ArrowLeft", 'keyCode': 37,'which':37});
-      console.log(e);
-      document.dispatchEvent(e);
+      triggerKeyDown();
 
       // inform all senders on the CastMessageBus of the incoming message event
       // sender message listener will be invoked
@@ -121,11 +114,19 @@ limitations under the License.
     document.getElementById('message').innerText = text;
     window.castReceiverManager.setApplicationState(text);
   };
+
+  function triggerKeyDown() {
+    var e = new KeyboardEvent('keydown', {'key': 'ArrowLeft', 'code': "ArrowLeft", 'keyCode': 38,'which':38});
+    document.dispatchEvent(e);
+      console.log(e);
+  };
+
 </script>
 
+<!--<body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
+-->
+<body ng-controller="appController"  style="background-color:darkgrey">
 
-
-<body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
     <div data-ng-if="!instructionsDisplayed" class="instructions">
         <h2>Instructions!!</h2>
         <p>Shoot everything and stay alive</p>
@@ -134,6 +135,8 @@ limitations under the License.
         <br>
         <p>Press any key to start</p>
     </div>
+
+
 
       <div id="message" style="text-align:center;">Talk to me!</div>
 
