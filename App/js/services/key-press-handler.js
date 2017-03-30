@@ -104,10 +104,11 @@ angular.module("gameApp")
         }
 
         function processKeyCode(keyCode) {
-          console.log("we got to process!");
+
             switch (keyCode) {
                 case 37: //left
                     return characterDirection.left;
+                    console.log("we are going left");
 
                 case 38: //up
                     return characterDirection.up;
