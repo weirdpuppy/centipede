@@ -1,4 +1,4 @@
-var game_var == true;
+var game_var == false;
 
 angular.module("gameApp", [])
 
