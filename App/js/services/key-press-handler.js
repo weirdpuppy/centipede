@@ -1,3 +1,5 @@
+
+
 angular.module("gameApp")
     .service("keyPressHandlerService", ["characterDirection", function(characterDirection) {
         var KeyPressEnum = {

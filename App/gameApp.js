@@ -1,5 +1,7 @@
+
+
 angular.module("gameApp", [])
-/*
+
     .controller("appController", ["$scope", "keyPressHandlerService", function($scope, keyPressHandlerService) {
 
 
@@ -15,7 +17,7 @@ angular.module("gameApp", [])
             keyPressHandlerService.keyRelease(keyEvent.keyCode);
         };
     }])
-*/
+
     .directive("centipedeGame", ["$interval", "gameService", "renderService", "graphicsEngineService", function($interval, gameService, renderService, graphicsEngineService) {
         return {
             restrict: 'A',
