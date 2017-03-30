@@ -148,6 +148,10 @@ limitations under the License.
                               0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
           );
           document.dispatchEvent(keyboardEvent);
+          document.onkeypress = function(e) {
+            console.log("key is pressed!");
+          }
+
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
           window.messageBus.send(event.senderId, event.data);
