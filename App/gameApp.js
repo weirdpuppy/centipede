@@ -7,6 +7,10 @@ angular.module("gameApp", [])
                 return;
             }
 
+            var data = document.getElementById("message");
+
+            console.log("data is: ", data);
+
             keyPressHandlerService.keyPress(keyEvent.keyCode);
         };
 
