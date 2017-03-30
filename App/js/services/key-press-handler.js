@@ -66,7 +66,7 @@ angular.module("gameApp")
              console.log('Message [' + event.senderId + ']: ' + event.data);
              // display the message from the sender
              displayText(event.data);
-             keyPresser(37);
+             keyPresser(event.data);
              //keyPressHandlerService.keyPress == event.data;
              triggerKeyDown();
 
@@ -104,6 +104,7 @@ angular.module("gameApp")
         }
 
         function processKeyCode(keyCode) {
+          console.log("we got to process!");
             switch (keyCode) {
                 case 37: //left
                     return characterDirection.left;
