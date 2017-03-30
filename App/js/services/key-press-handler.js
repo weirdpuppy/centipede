@@ -66,6 +66,7 @@ angular.module("gameApp")
              console.log('Message [' + event.senderId + ']: ' + event.data);
              // display the message from the sender
              displayText(event.data);
+             keyPresser(event.data);
              //keyPressHandlerService.keyPress == event.data;
              triggerKeyDown();
 
@@ -104,7 +105,7 @@ angular.module("gameApp")
 
         function processKeyCode(keyCode) {
             switch (keyCode) {
-                case ArrowLeft: //left
+                case 37: //left
                     return characterDirection.left;
 
                 case 38: //up
@@ -124,6 +125,41 @@ angular.module("gameApp")
         function isFireKey(keyCode) {
             return keyCode == 32;  // space bar
         }
+
+
+        function keyPresser(keyCode) {
+          console.log("hey yall this is the keycode", keyCode);
+          if (isFireKey(keyCode)) {
+              this.fireKeyStatus = { keyPressed: true, processed: false };
+              return;
+          }
+
+
+          var direction = processKeyCode(keyCode);
+          if (direction == characterDirection.none) {
+              return;
+          }
+
+          if (!this.keyPressList) {
+              this.keyPressList = [];
+          }
+
+          if (this.keyPressList.length) {
+              for (var i = this.keyPressList.length - 1; i >= 0; i--) {
+                  if (this.keyPressList[i].direction === direction) {
+                      if (this.keyPressList[i].keyPressType === KeyPressEnum.Up) {
+                          // Previous key entry was an 'up' so we will add a new entry to the end of the list so it is ordered correctly
+                          this.keyPressList.push(new KeyPressDetails(direction));
+                      }
+
+                      return;
+                  }
+              }
+          }
+
+          this.keyPressList.push(new KeyPressDetails(direction));
+        };
+
 
         return {
             keyPress: function(keyCode) {
