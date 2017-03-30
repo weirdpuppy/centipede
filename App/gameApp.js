@@ -10,11 +10,11 @@ angular.module("gameApp", [])
                 $scope.instructionsDisplayed = true;
                 return;
             }
-            keyPressHandlerService.keyPress(keyEvent.keyCode);
+            keyPressHandlerService.keyPress(keyEvent.key);
         };
 
         $scope.keyup = function(keyEvent) {
-            keyPressHandlerService.keyRelease(keyEvent.keyCode);
+            keyPressHandlerService.keyRelease(keyEvent.key);
         };
     }])
 
