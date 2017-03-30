@@ -125,7 +125,7 @@ limitations under the License.
 
 <!--<body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
 -->
-<body ng-controller="appController"  style="background-color:darkgrey">
+<body  centipede-game>
 
     <div data-ng-if="!instructionsDisplayed" class="instructions">
         <h2>Instructions!!</h2>
@@ -140,7 +140,7 @@ limitations under the License.
 
       <div id="message" style="text-align:center;">Talk to me!</div>
 
-    <div data-ng-if="instructionsDisplayed" centipede-game/>
+    <!--<div data-ng-if="instructionsDisplayed" centipede-game/>-->
 
     <script src="App/lib/angular.min.js"></script>
     <script src="App/gameApp.js"></script>

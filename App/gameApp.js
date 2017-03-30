@@ -1,9 +1,9 @@
 
 
 angular.module("gameApp", [])
-
-    .controller("appController", ["$scope", "keyPressHandlerService", function($scope, keyPressHandlerService) {
 /*
+    .controller("appController", ["$scope", "keyPressHandlerService", function($scope, keyPressHandlerService) {
+
 
         $scope.keydown = function(keyEvent) {
             if (!$scope.instructionsDisplayed) {
