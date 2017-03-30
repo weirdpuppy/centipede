@@ -101,6 +101,7 @@ limitations under the License.
 
       var e = new KeyboardEvent('keydown', {'key': 'ArrowLeft', 'code': "ArrowLeft", 'keyCode': 37,'which':37});
       console.log(e);
+      document.dispatchEvent(e);
 
       // inform all senders on the CastMessageBus of the incoming message event
       // sender message listener will be invoked
