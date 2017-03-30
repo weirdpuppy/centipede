@@ -131,26 +131,12 @@ limitations under the License.
           displayText(event.data);
           //keyPressHandlerService.keyPress == event.data;
 
-          var keyboardEvent = document.createEvent("KeyboardEvent");
-          var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+          document.addEventListener('keydown', function(ev){
+            console.log(ev.which);
+          });
 
-
-          keyboardEvent[initMethod](
-                             "keydown", // event type : keydown, keyup, keypress
-                              true, // bubbles
-                              true, // cancelable
-                              window, // viewArg: should be window
-                              false, // ctrlKeyArg
-                              false, // altKeyArg
-                              false, // shiftKeyArg
-                              false, // metaKeyArg
-                              event.data, // keyCodeArg : unsigned long the virtual key code, else 0
-                              0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-          );
-          document.dispatchEvent(keyboardEvent);
-          document.onkeypress = function(e) {
-            console.log("key is pressed!");
-          }
+          var e = new KeyboardEvent('keydown',{'keyCode':event.data,'which':event.data});
+          console.log(e);
 
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
