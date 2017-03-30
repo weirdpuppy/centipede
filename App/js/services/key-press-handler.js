@@ -52,12 +52,13 @@ angular.module("gameApp")
 
         return {
             keyPress: function(keyCode) {
+                console.log("hey yall this is the keycode", keyCode);
                 if (isFireKey(keyCode)) {
                     this.fireKeyStatus = { keyPressed: true, processed: false };
                     return;
                 }
 
-                console.log("hey yall this is the keycode", keyCode);
+
                 var direction = processKeyCode(keyCode);
                 if (direction == characterDirection.none) {
                     return;
