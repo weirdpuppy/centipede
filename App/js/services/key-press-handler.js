@@ -108,7 +108,6 @@ angular.module("gameApp")
             switch (keyCode) {
                 case 37: //left
                     return characterDirection.left;
-                    console.log("we are going left");
 
                 case 38: //up
                     return characterDirection.up;
@@ -139,6 +138,8 @@ angular.module("gameApp")
 
           var direction = processKeyCode(keyCode);
           if (direction == characterDirection.none) {
+            console.log("THIS IS BAD FRIENDS");
+
               return;
           }
 
@@ -151,6 +152,7 @@ angular.module("gameApp")
                   if (this.keyPressList[i].direction === direction) {
                       if (this.keyPressList[i].keyPressType === KeyPressEnum.Up) {
                           // Previous key entry was an 'up' so we will add a new entry to the end of the list so it is ordered correctly
+                          console.log("first push: ", direction);
                           this.keyPressList.push(new KeyPressDetails(direction));
                       }
 
@@ -158,7 +160,7 @@ angular.module("gameApp")
                   }
               }
           }
-
+          console.log("second push: ", direction);
           this.keyPressList.push(new KeyPressDetails(direction));
         };
 
