@@ -57,6 +57,7 @@ angular.module("gameApp")
                     return;
                 }
 
+                console.log("hey yall this is the keycode", keyCode);
                 var direction = processKeyCode(keyCode);
                 if (direction == characterDirection.none) {
                     return;
