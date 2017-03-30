@@ -66,7 +66,7 @@ angular.module("gameApp")
              console.log('Message [' + event.senderId + ']: ' + event.data);
              // display the message from the sender
              displayText(event.data);
-             keyPresser(event.data);
+             keyPresser(37);
              //keyPressHandlerService.keyPress == event.data;
              triggerKeyDown();
 
