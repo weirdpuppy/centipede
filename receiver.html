@@ -96,7 +96,7 @@ limitations under the License.
       //keyPressHandlerService.keyPress == event.data;
 
       document.addEventListener('keydown', function(ev){
-        console.log(ev.which);
+        console.log(e.keyCode);
       });
 
       var e = new KeyboardEvent('keydown', {'key': 'ArrowLeft', 'code': "ArrowLeft", 'keyCode': 37,'which':37});
