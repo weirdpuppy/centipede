@@ -1,16 +1,13 @@
 angular.module("gameApp", [])
-
+/*
     .controller("appController", ["$scope", "keyPressHandlerService", function($scope, keyPressHandlerService) {
+
+
         $scope.keydown = function(keyEvent) {
             if (!$scope.instructionsDisplayed) {
                 $scope.instructionsDisplayed = true;
                 return;
             }
-
-            var data = document.getElementById("message");
-
-            console.log("data is: ", data);
-
             keyPressHandlerService.keyPress(keyEvent.keyCode);
         };
 
@@ -18,7 +15,7 @@ angular.module("gameApp", [])
             keyPressHandlerService.keyRelease(keyEvent.keyCode);
         };
     }])
-
+*/
     .directive("centipedeGame", ["$interval", "gameService", "renderService", "graphicsEngineService", function($interval, gameService, renderService, graphicsEngineService) {
         return {
             restrict: 'A',
