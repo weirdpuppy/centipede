@@ -1,7 +1,9 @@
+var game_var == true;
+
 angular.module("gameApp", [])
 
     .controller("appController", ["$scope", "keyPressHandlerService", function($scope, keyPressHandlerService) {
-        $scope.keydown = function(keyEvent) {
+        $scope.keydown = function(game_var) {
             if (!$scope.instructionsDisplayed) {
                 $scope.instructionsDisplayed = true;
                 return;

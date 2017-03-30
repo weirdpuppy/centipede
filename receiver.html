@@ -87,6 +87,7 @@ limitations under the License.
 -->
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
+
       window.onload = function() {
         cast.receiver.logger.setLevelValue(0);
         window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
@@ -128,6 +129,8 @@ limitations under the License.
           console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
           displayText(event.data);
+
+
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
           window.messageBus.send(event.senderId, event.data);
