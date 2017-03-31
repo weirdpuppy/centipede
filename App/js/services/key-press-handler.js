@@ -104,7 +104,11 @@ angular.module("gameApp")
         }
 
         function processKeyCode(keyCode) {
-          console.log("keycode is: ", keyCode);
+
+          if(keyCode == 37) {
+            console.log("keycode is: ", keyCode);
+          }
+
             switch (keyCode) {
                 case 37: //left
                     return characterDirection.left;
