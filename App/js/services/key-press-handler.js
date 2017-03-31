@@ -236,6 +236,8 @@ angular.module("gameApp")
                 if (this.keyPressList && this.keyPressList.length) {
                     direction = this.keyPressList[0].direction;
 
+                    console.log("this is direction: ", direction);
+
                     switch (this.keyPressList[0].keyPressType) {
                         case KeyPressEnum.DownUnprocessed:
                             this.keyPressList[0].keyPressType = KeyPressEnum.DownProcessed;
