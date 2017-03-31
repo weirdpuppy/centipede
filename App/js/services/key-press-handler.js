@@ -66,7 +66,7 @@ angular.module("gameApp")
              console.log('Message [' + event.senderId + ']: ' + event.data);
              // display the message from the sender
              displayText(event.data);
-             keyPresser(event.data);
+             keyPress(event.data);
              //keyPressHandlerService.keyPress == event.data;
              triggerKeyDown();
 
@@ -175,6 +175,7 @@ angular.module("gameApp")
 
                 var direction = processKeyCode(keyCode);
                 if (direction == characterDirection.none) {
+                    console.log("THIS IS BAD FRIENDS");
                     return;
                 }
 
@@ -194,7 +195,7 @@ angular.module("gameApp")
                         }
                     }
                 }
-
+                  console.log("second push: ", direction);
                 this.keyPressList.push(new KeyPressDetails(direction));
             },
 
@@ -231,8 +232,6 @@ angular.module("gameApp")
             },
 
             getNextMovement: function() {
-
-              console.log("get next movement!");
 
                 var direction = characterDirection.none;
 
