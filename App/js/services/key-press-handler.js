@@ -104,8 +104,6 @@ angular.module("gameApp")
         }
 
         function processKeyCode(keyCode) {
-
-
             switch (keyCode) {
                 case "37": //left
                     return characterDirection.left;

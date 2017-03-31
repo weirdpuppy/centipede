@@ -74,8 +74,10 @@ angular.module("gameApp")
                 }
 
                 var playerMove = keyPressHandlerService.getNextMovement();
-
+                console.log("player move: ", playerMove);
                 if (playerMove.direction != characterDirection.none && !gameBoardService.playerAllowedToMove(player.x, player.y, playerMove.direction)) {
+
+                    console.log("player can move!");
                     playerMove.direction = characterDirection.none;
                 }
 
@@ -115,7 +117,7 @@ angular.module("gameApp")
                         break;
                 }
             },
-            
+
             draw: function(animation) {
                 if (!player) {
                     return;
