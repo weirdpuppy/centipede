@@ -231,6 +231,9 @@ angular.module("gameApp")
             },
 
             getNextMovement: function() {
+
+              console.log("get next movement!");
+
                 var direction = characterDirection.none;
 
                 if (this.keyPressList && this.keyPressList.length) {
