@@ -153,8 +153,17 @@ limitations under the License.
        * receiver CastMessageBus message handler will be invoked
        * @param {string} message A message string
        */
+       function connect()
+       {
+         console.log('connecting')
+         chrome.cast.requestSession(function(e) {
+             session = e;
+             session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
+               message), onError);
+       }
       function sendMessage(message) {
         if (session != null) {
+          console.log('sending message');
           session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' + message),
             onError);
         }
@@ -163,7 +172,7 @@ limitations under the License.
               session = e;
               session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
                 message), onError);
-            }, onError);
+            }
         }
 
         console.log(message);
@@ -196,11 +205,8 @@ limitations under the License.
     </script>
   </head>
   <body>
-     <form>
-                <button type="button" id="castme">Click To Cast</button>
-     </form>
-         <script type="text/javascript" src="//www.github.com/weirdpuppy/centipede/script.js"></script>
 
+                <button type="button" id="castme">Click To Cast</button>
 
     <button type ="button" onclick="sendMessage(37)"> Start! </button>
 
