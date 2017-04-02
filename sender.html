@@ -167,7 +167,7 @@ limitations under the License.
       function sendMessage(message) {
         if (session != null) {
           console.log('sending message');
-          new Timeout a;
+          new Timeout() a;
           a.sendCustomMessage = 4000;
                session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' + message),
                onError);
