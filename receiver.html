@@ -51,8 +51,8 @@ limitations under the License.
 
 <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 
-<!--
-<body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
+
+<!--<body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
 -->
 <body>
 <!--
@@ -64,14 +64,14 @@ limitations under the License.
         <br>
         <p>Press any key to start</p>
     </div>
-
-      <div id="message" style="text-align:center;">Talk to me!</div>
 -->
+      <div id="message" style="text-align:center;">Talk to me!</div>
 
 <div ng-controller="appController" centipede-game/>
 
 
-  <!--  <div data-ng-if="instructionsDisplayed" centipede-game/> -->
+
+    <!--<div data-ng-if="instructionsDisplayed" centipede-game/>-->
 
     <script src="App/lib/angular.min.js"></script>
     <script src="App/gameApp.js"></script>
@@ -97,6 +97,7 @@ limitations under the License.
     <script src="App/js/services/snail.js"></script>
     <script src="App/js/services/game-state.js"></script>
 </body>
+
 
 
 </html>

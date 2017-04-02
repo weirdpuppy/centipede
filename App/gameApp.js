@@ -49,7 +49,7 @@ angular.module("gameApp", [])
           keyPressHandlerService.keyPress(event.data);
           keyPressHandlerService.keyRelease(event.data);
           //keyPressHandlerService.keyPress == event.data;
-
+        
 
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
