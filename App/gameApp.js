@@ -110,7 +110,7 @@ angular.module("gameApp", [])
     .directive("centipedeGame", ["$interval", "gameService", "renderService", "graphicsEngineService", function($interval, gameService, renderService, graphicsEngineService) {
         return {
             restrict: 'A',
-            template: '<canvas id="gameCanvas" width="600" height="640" left=50% setAttribute('style', "position: absolute;  left: 50%;margin-left:-400px; top: 50% margin-top:-300px; border:2px solid blue");style="border:1px solid #000000;"></canvas>',
+            template: '<canvas id="gameCanvas" width="600" height="640" left="300" style="border:1px solid #000000;"></canvas>',
 
             link: function(scope, element) {
                 var intervalPromise;
