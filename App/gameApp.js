@@ -43,19 +43,11 @@ angular.module("gameApp", [])
         window.messageBus.onMessage = function(event) {
           console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
-
           displayText(event.data);
 
 
-          //  console.log("pausing!");
-
-            keyPressHandlerService.keyPress(event.data);
-            keyPressHandlerService.keyRelease(event.data);
-          
-
-
-
-
+          keyPressHandlerService.keyPress(event.data);
+          keyPressHandlerService.keyRelease(event.data);
           //keyPressHandlerService.keyPress == event.data;
 
 
@@ -85,9 +77,20 @@ angular.module("gameApp", [])
       };
 
 
+/*
 
+        $scope.keydown = function(keyEvent) {
+            if (!$scope.instructionsDisplayed) {
+                $scope.instructionsDisplayed = true;
+                return;
+            }
+            keyPressHandlerService.keyPress(keyEvent.key);
+        };
 
-
+        $scope.keyup = function(keyEvent) {
+            keyPressHandlerService.keyRelease(keyEvent.key);
+        };
+*/
     }])
 
 
