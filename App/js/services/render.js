@@ -23,7 +23,7 @@ angular.module("gameApp")
                         globalSettings.gameOverFontColour,
                         globalSettings.gameOverFont);
                 }
-                 if (!gameStateService.hasPlayerDeathTransitionComplete()) {
+                 if (!gameStateService.isGameOver()&&!gameStateService.hasPlayerDeathTransitionComplete()) {
                     graphicsEngineService.drawText(
                         coordinateSystem.screen,
                         globalSettings.gameOverXPosition,
