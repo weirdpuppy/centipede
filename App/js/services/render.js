@@ -23,6 +23,15 @@ angular.module("gameApp")
                         globalSettings.gameOverFontColour,
                         globalSettings.gameOverFont);
                 }
+                 if (gameStateService.hasPlayerDeathTransitionComplete()) {
+                    graphicsEngineService.drawText(
+                        coordinateSystem.screen,
+                        globalSettings.gameOverXPosition,
+                        globalSettings.gameOverYPosition,
+                        "You Died",
+                        globalSettings.gameOverFontColour,
+                        globalSettings.gameOverFont);
+                }
                 
                     
             }
