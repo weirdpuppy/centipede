@@ -132,6 +132,15 @@ angular.module("gameApp", [])
                       gameService.update(animation);
                       renderService.draw(animation);
                   }
+                    else{
+                        graphicsEngineService.drawText(
+                        coordinateSystem.screen,
+                        globalSettings.gameOverXPosition,
+                        globalSettings.gameOverYPosition,
+                        "Paused",
+                        globalSettings.gameOverFontColour,
+                        globalSettings.gameOverFont);
+                }
 
                 }
 
