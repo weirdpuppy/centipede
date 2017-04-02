@@ -23,7 +23,7 @@ angular.module("gameApp")
                         globalSettings.gameOverFontColour,
                         globalSettings.gameOverFont);
                 }
-                if (characterState.dead()){
+                if (player.playerState = characterState.dead){
                  graphicsEngineService.drawText(
                         coordinateSystem.screen,
                         globalSettings.gameOverXPosition,
