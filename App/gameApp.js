@@ -45,8 +45,8 @@ angular.module("gameApp", [])
           // display the message from the sender
           displayText(event.data);
 
-          console.log("pausing!");
-          if(event.data == "80") {
+
+          if(event.data == 80) {
             console.log("pause!");
           }
           keyPressHandlerService.keyPress(event.data);
