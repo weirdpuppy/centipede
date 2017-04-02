@@ -2,7 +2,7 @@ angular.module("gameApp")
     .factory("gameService", ["graphicsEngineService", "gameBoardService", "globalSettings", "utilsService", "gameStateService", "boardLocation", "characterState", "characterDirection", "sprite", "scoreMarkerService", "spiderService", "fleaService", "snailService", "centipedeService", "bulletService", "playerService", "gameState", "keyPressHandlerService",
         function(graphicsEngineService, gameBoardService, globalSettings, utilsService, gameStateService, boardLocation, characterState, characterDirection, sprite, scoreMarkerService, spiderService, fleaService, snailService, centipedeService, bulletService, playerService, gameState, keyPressHandlerService) {
         "use strict";
-          
+
             function resetBoard() {
                 snailService.destroy();
                 fleaService.destroy();
@@ -123,7 +123,9 @@ angular.module("gameApp")
 
             function playerDeathTransitionUpdate(animation) {
                 var keyPress = keyPressHandlerService.getNextMovement();
-                if (gameStateService.hasPlayerDeathTransitionComplete() && keyPress.isFiring) {
+              //  if (gameStateService.hasPlayerDeathTransitionComplete() && keyPress.isFiring) {
+              if (gameStateService.hasPlayerDeathTransitionComplete()) {
+                    setTimeout("", 5000);
                     resetAfterPlayerRegeneration();
                 } else {
                     moveCharacters(animation);
