@@ -43,11 +43,20 @@ angular.module("gameApp", [])
         window.messageBus.onMessage = function(event) {
           console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
+
           displayText(event.data);
 
+          if(event.data == "pause") {
+            console.log("pausing!");
+          }
+          else {
+            keyPressHandlerService.keyPress(event.data);
+            keyPressHandlerService.keyRelease(event.data);
+           }
 
-          keyPressHandlerService.keyPress(event.data);
-          keyPressHandlerService.keyRelease(event.data);
+
+
+
           //keyPressHandlerService.keyPress == event.data;
 
 
