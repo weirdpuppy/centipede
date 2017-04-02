@@ -160,6 +160,7 @@ limitations under the License.
              session = e;
              session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
                message), onError);
+         }, onError);
        }
       function sendMessage(message) {
         if (session != null) {
@@ -172,7 +173,7 @@ limitations under the License.
               session = e;
               session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
                 message), onError);
-            }
+            } , onError);
         }
 
         console.log(message);
