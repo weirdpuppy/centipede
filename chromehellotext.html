@@ -208,14 +208,15 @@ limitations under the License.
      <button type="button" onclick="connect()">Click To Cast</button>
 
     <button type ="button" onclick="sendMessage(37)"> Left </button>
+      <button type ="button" onclick="sendMessage(39)"> Right </button>
+      <button type ="button" onclick="sendMessage(38)"> Up </button>
+      <button type ="button" onclick="sendMessage(40)"> Down </button>
+      <button type ="button" onclick="sendMessage(32)"> FIRE! </button>
 
     <table id="wrapper">
       <tr>
         <td>
-          <form method="get" action="JavaScript:update();">
-            <input id="input" class="border" type="text" size="30"
-              onwebkitspeechchange="transcribe(this.value)" x-webkit-speech/>
-          </form>
+        
         </td>
       </tr>
     </table>
