@@ -166,7 +166,6 @@ limitations under the License.
        }
       function sendMessage(message) {
         if (session != null) {
-          
           console.log('sending message');
           session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' + message),
             onError);
