@@ -45,7 +45,7 @@ angular.module("gameApp", [])
           // display the message from the sender
           displayText(event.data);
 
-
+          console.log("pausing!");
           if(event.data == "80") {
             console.log("pause!");
           }
