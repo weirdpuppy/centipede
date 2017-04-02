@@ -1,4 +1,4 @@
-var paused == 0;
+var paused = 0;
 
 angular.module("gameApp", [])
 
@@ -121,10 +121,10 @@ angular.module("gameApp", [])
                         animation = 0;
                     }
 
-                    if(!paused) {
+                   if(paused != 1) {
                       gameService.update(animation);
                       renderService.draw(animation);
-                    }
+                  }
 
                 }
 
