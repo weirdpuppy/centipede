@@ -155,7 +155,6 @@ limitations under the License.
        */
        function connect()
        {
-         console.log('connecting');
          chrome.cast.requestSession(function(e) {
              session = e;
              session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
@@ -169,11 +168,7 @@ limitations under the License.
             onError);
         }
         else {
-          chrome.cast.requestSession(function(e) {
-              session = e;
-              session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
-                message), onError);
-            } , onError);
+          connect();
         }
 
         console.log(message);
@@ -207,7 +202,7 @@ limitations under the License.
   </head>
   <body>
 
-                <button type="button" onclick="connect()">Click To Cast</button>
+     <button type="button" onclick="connect()">Click To Cast</button>
 
     <button type ="button" onclick="sendMessage(37)"> Start! </button>
 
