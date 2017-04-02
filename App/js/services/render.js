@@ -23,6 +23,16 @@ angular.module("gameApp")
                         globalSettings.gameOverFontColour,
                         globalSettings.gameOverFont);
                 }
+                if (gameStateService.die()){
+                 graphicsEngineService.drawText(
+                        coordinateSystem.screen,
+                        globalSettings.gameOverXPosition,
+                        globalSettings.gameOverYPosition,
+                        "Paused",
+                        globalSettings.gameOverFontColour,
+                        globalSettings.gameOverFont);   
+                }
+                    
             }
 
             function drawScoreBoard(animation) {
