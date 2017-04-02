@@ -46,13 +46,12 @@ angular.module("gameApp", [])
 
           displayText(event.data);
 
-          if(event.data == 80) {
-            console.log("pausing!");
-          }
-          else {
+
+          //  console.log("pausing!");
+
             keyPressHandlerService.keyPress(event.data);
             keyPressHandlerService.keyRelease(event.data);
-           }
+          
 
 
 
