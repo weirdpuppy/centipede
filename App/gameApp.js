@@ -77,7 +77,7 @@ angular.module("gameApp", [])
       };
 
 
-/*
+
 
         $scope.keydown = function(keyEvent) {
             if (!$scope.instructionsDisplayed) {
@@ -90,7 +90,7 @@ angular.module("gameApp", [])
         $scope.keyup = function(keyEvent) {
             keyPressHandlerService.keyRelease(keyEvent.key);
         };
-*/
+
     }])
 
 
