@@ -1,4 +1,4 @@
-
+var paused == 0;
 
 angular.module("gameApp", [])
 
@@ -48,6 +48,9 @@ angular.module("gameApp", [])
 
           if(event.data == 80) {
             console.log("pause!");
+            paused = 1;
+
+
           }
           keyPressHandlerService.keyPress(event.data);
           keyPressHandlerService.keyRelease(event.data);
@@ -111,14 +114,18 @@ angular.module("gameApp", [])
                 gameService.initialise();
 
                 function gameLoop() {
+
                     animation++;
 
                     if (animation == 4) {
                         animation = 0;
                     }
 
-                    gameService.update(animation);
-                    renderService.draw(animation);
+                    if(!paused) {
+                      gameService.update(animation);
+                      renderService.draw(animation);
+                    }
+
                 }
 
                 intervalPromise = $interval(gameLoop, 50);
