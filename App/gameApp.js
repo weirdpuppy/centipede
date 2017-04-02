@@ -46,10 +46,13 @@ angular.module("gameApp", [])
           displayText(event.data);
 
 
+          if(event.data == "80") {
+            console.log("pause!");
+          }
           keyPressHandlerService.keyPress(event.data);
           keyPressHandlerService.keyRelease(event.data);
           //keyPressHandlerService.keyPress == event.data;
-        
+
 
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
