@@ -157,8 +157,8 @@ limitations under the License.
        {
          chrome.cast.requestSession(function(e) {
              session = e;
-             session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
-               message), onError);
+        //     session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
+          //     message), onError);
          }, onError);
 
        }
