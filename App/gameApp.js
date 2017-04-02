@@ -45,21 +45,6 @@ angular.module("gameApp", [])
           // display the message from the sender
           displayText(event.data);
 
-          $scope.keydown = function(keyEvent) {
-              if (!$scope.instructionsDisplayed) {
-                  $scope.instructionsDisplayed = true;
-                  return;
-              }
-              keyPressHandlerService.keyPress(event.data);
-          };
-
-          $scope.keyup = function(keyEvent) {
-              keyPressHandlerService.keyRelease(event.data);
-          };
-
-
-
-
 
           keyPressHandlerService.keyPress(event.data);
           keyPressHandlerService.keyRelease(event.data);

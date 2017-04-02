@@ -51,11 +51,11 @@ limitations under the License.
 
 <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 
-
+<!--
 <body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
-
-<!--<body>-->
-
+-->
+<body>
+<!--
     <div data-ng-if="!instructionsDisplayed" class="instructions">
         <h2>Instructions!!</h2>
         <p>Shoot everything and stay alive</p>
@@ -66,10 +66,9 @@ limitations under the License.
     </div>
 
       <div id="message" style="text-align:center;">Talk to me!</div>
-
-<!--
-<div ng-controller="appController" centipede-game/>
 -->
+
+<div ng-controller="appController" centipede-game/>
 
 
     <div data-ng-if="instructionsDisplayed" centipede-game/>
