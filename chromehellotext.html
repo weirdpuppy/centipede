@@ -155,7 +155,7 @@ limitations under the License.
        */
        function connect()
        {
-         console.log('connecting')
+         console.log('connecting');
          chrome.cast.requestSession(function(e) {
              session = e;
              session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
