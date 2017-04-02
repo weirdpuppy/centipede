@@ -135,7 +135,7 @@ angular.module("gameApp")
             function wait() {
               var start = new Date().getTime();
               var end = start;
-              while (end < start + 5000000000000) {
+              while (end < start + 50000) {
                 end = new Date().getTime();
               }
             }
