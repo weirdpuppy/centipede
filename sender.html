@@ -168,7 +168,7 @@ limitations under the License.
         if (session != null) {
           console.log('sending message');
           a = new chrome.cast.Timeout();
-          a.sendCustomMessage = 4000;
+          a.sendCustomMessage = 7000;
                session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' + message),
                onError);
 
