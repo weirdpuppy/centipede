@@ -47,13 +47,14 @@ limitations under the License.
     <script type="text/javascript" src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript">
-         a = new chrome.cast.Timeout();
-          a.sendCustomMessage = 70000;
+         
       console.log("Hi Roxanne");
-         console.log(a.sendCustomMessage);
       var applicationID = '4E855571';
       var namespace = 'urn:x-cast:com.google.cast.sample.helloworld';
       var session = null;
+      a = new chrome.cast.Timeout();
+      a.sendCustomMessage = 70000;   
+      console.log(a.sendCustomMessage);
 
       /**
        * Call initialization for Cast
