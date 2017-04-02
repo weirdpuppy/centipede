@@ -52,9 +52,7 @@ limitations under the License.
       var applicationID = '4E855571';
       var namespace = 'urn:x-cast:com.google.cast.sample.helloworld';
       var session = null;
-      a = new chrome.cast.Timeout();
-      a.sendCustomMessage = 70000;   
-      console.log(a.sendCustomMessage);
+      
 
       /**
        * Call initialization for Cast
@@ -62,7 +60,7 @@ limitations under the License.
       if (!chrome.cast || !chrome.cast.isAvailable) {
         setTimeout(initializeCastApi, 1000);
       }
-
+     
       /**
        * initialization
        */
@@ -73,6 +71,9 @@ limitations under the License.
           receiverListener);
 
         chrome.cast.initialize(apiConfig, onInitSuccess, onError);
+        a = new chrome.cast.Timeout();
+        a.sendCustomMessage = 70000;   
+        console.log(a.sendCustomMessage);
       }
 
       /**
