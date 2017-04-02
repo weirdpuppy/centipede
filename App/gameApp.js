@@ -44,9 +44,12 @@ angular.module("gameApp", [])
           console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
           displayText(event.data);
+
+
           keyPressHandlerService.keyPress(event.data);
+          keyPressHandlerService.keyRelease(event.data);
           //keyPressHandlerService.keyPress == event.data;
-          //triggerKeyDown();
+
 
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
