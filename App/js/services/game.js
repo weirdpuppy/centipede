@@ -135,9 +135,11 @@ angular.module("gameApp")
             function wait() {
               var start = new Date().getTime();
               var end = start;
-              while (end < start + 50000) {
+              while (end < start + 5000) {
                 end = new Date().getTime();
               }
+
+              console.log("waiting for 5000 ms");
             }
 
             function gameOverTransitionUpdate(animation) {
