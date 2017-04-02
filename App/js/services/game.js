@@ -125,7 +125,7 @@ angular.module("gameApp")
                 var keyPress = keyPressHandlerService.getNextMovement();
               //  if (gameStateService.hasPlayerDeathTransitionComplete() && keyPress.isFiring) {
               if (gameStateService.hasPlayerDeathTransitionComplete()) {
-                    setTimeout("", 5000);
+                    setTimeout("", 10000);
                     resetAfterPlayerRegeneration();
                 } else {
                     moveCharacters(animation);
