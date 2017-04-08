@@ -5,3 +5,7 @@
 App/bin/
 App/bld/
 *.suo
+
+#lib
+
+lib
