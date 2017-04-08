@@ -6,3 +6,5 @@ App/bin/
 App/bld/
 *.suo
 
+# awesome fonts
+lib
