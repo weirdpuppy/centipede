@@ -122,7 +122,7 @@ td.arrows {
 }
 
 #instructions {
-    background-color: black;
+    background-color: #1f0322;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -138,14 +138,29 @@ td.arrows {
     font-family: Nunito;
     font-weight: 700;
     padding: 10px;
+    
 }
 
 .instructions_box h3 {
     font-size: .9em;
 }
 
+.text-box {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 .modal-box {
-    opacity: .8;
+    opacity: .8
+    
 }
 
 .close {
@@ -163,10 +178,8 @@ td.arrows {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    min-width: 500px;
-    max-height: 500px;
+    height: 65%;
+    width: 70%;
 }
 
 ::-webkit-scrollbar {
