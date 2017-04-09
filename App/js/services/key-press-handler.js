@@ -172,7 +172,7 @@ angular.module("gameApp")
 
                     console.log("this is direction: ", direction);
                     //get type as defined at top of file
-                    switch (this.keyPressList[0].keyPressType) {}
+                    switch (this.keyPressList[0].keyPressType) {
                       //if key down and unprocessed, remain unprocessed
                         case KeyPressEnum.DownUnprocessed:
                             this.keyPressList[0].keyPressType = KeyPressEnum.DownProcessed;
