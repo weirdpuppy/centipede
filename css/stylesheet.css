@@ -43,6 +43,19 @@ section {
     box-shadow: 0 9px #999;
 }
 
+#title {
+    color: #35af79;
+    font-size: 6em;
+}
+
+#subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    color: gray;
+    margin-top: -30px;
+}
+
 .col-sm-4 {
     width: 300px;
 }
@@ -90,7 +103,7 @@ td.arrows {
 }
 
 .A {
-    background-color: #5daf7e;
+    background-color: #35af79;
     color: #468860;
     margin-bottom: 20px;
 }
