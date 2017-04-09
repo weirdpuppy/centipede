@@ -51,7 +51,7 @@ section {
     display: none;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     #info {
         display: block;
         background-color: black;
