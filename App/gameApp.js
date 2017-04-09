@@ -141,7 +141,7 @@ angular.module("gameApp", [])
                   }
                    else{
                         graphicsEngineService.drawText(
-                        coordinateSystem.screen,
+                        1,
                         210,
                         300,
                         "Paused",
