@@ -139,7 +139,15 @@ angular.module("gameApp", [])
                       gameService.update(animation);
                       renderService.draw(animation);
                   }
-                        
+                   else{
+                        graphicsEngineService.drawText(
+                        1,
+                        210,
+                        300,
+                        "Paused",
+                        "yellow",
+                        "32px Arial bold");
+                   }
 
 
                 }
