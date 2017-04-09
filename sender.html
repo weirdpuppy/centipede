@@ -149,17 +149,21 @@ limitations under the License.
          * @param {string} message A message string
          */
         function connect() {
-            document.getElementById("splash").style.display = "none";
-            document.getElementById("play").style.display = "inline";
-
             message = 22;
             chrome.cast.requestSession(function (e) {
                 session = e;
-                session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' +
-                    message), onError);
+                session.sendMessage(namespace, message, displayController(), onError);
             }, onError);
 
         }
+
+        function displayController() {
+            document.getElementById("splash").style.display = "none";
+            document.getElementById("play").style.display = "inline";
+
+
+        }
+
         //Function to send a message to the receiver
         function sendMessage(message) {
             if (session != null) {
@@ -290,7 +294,7 @@ limitations under the License.
         </div>
 
         <script type="text/javascript">
-          // document.getElementById("input").focus();
+            // document.getElementById("input").focus();
         </script>
 </body>
 
