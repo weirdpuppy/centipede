@@ -138,7 +138,6 @@ td.arrows {
     font-family: Nunito;
     font-weight: 700;
     padding: 10px;
-    
 }
 
 .instructions_box h3 {
@@ -148,7 +147,7 @@ td.arrows {
 .text-box {
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
     width: 80%;
     margin-left: auto;
@@ -158,16 +157,17 @@ td.arrows {
     overflow-y: scroll;
 }
 
-.modal-box {
-    opacity: .8
-    
-}
-
 .close {
     color: #fce17a;
     text-align: left;
     font-size: 1em;
     z-index: 100;
+    opacity: inherit;
+    border: none;
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
 }
 
 .instructions_box {
