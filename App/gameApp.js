@@ -144,7 +144,7 @@ angular.module("gameApp", [])
                         coordinateSystem.screen,
                         210,
                         300,
-                        "You Died",
+                        "Paused",
                         "yellow",
                         "32px Arial bold");
                    }
