@@ -139,7 +139,15 @@ angular.module("gameApp", [])
                       gameService.update(animation);
                       renderService.draw(animation);
                   }
-                        
+                   else{
+                        graphicsEngineService.drawText(
+                        coordinateSystem.screen,
+                        210,
+                        300,
+                        "You Died",
+                        "yellow",
+                        "32px Arial bold");
+                   }
 
 
                 }
