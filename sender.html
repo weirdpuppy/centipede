@@ -149,8 +149,8 @@ limitations under the License.
          * @param {string} message A message string
          */
         function connect() {
-            document.getElementById("splash").style.display = none;
-            document.getElementById("play").style.display = inline;
+            document.getElementById("splash").style.display = "none";
+            document.getElementById("play").style.display = "inline";
 
             message = 22;
             chrome.cast.requestSession(function (e) {
