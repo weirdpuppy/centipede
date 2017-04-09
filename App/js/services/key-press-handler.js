@@ -32,7 +32,7 @@ angular.module("gameApp")
             this.direction = direction;
             this.keyPressType = KeyPressEnum.DownUnprocessed;
         }
-
+        //get direction based on key code
         function processKeyCode(keyCode) {
             switch (keyCode) {
                 case "37": //left
@@ -64,18 +64,18 @@ angular.module("gameApp")
               return;
           }
 
-
+          //get direction
           var direction = processKeyCode(keyCode);
           if (direction == characterDirection.none) {
             console.log("THIS IS BAD FRIENDS");
 
               return;
           }
-
+          //initialize list to hold key presses
           if (!this.keyPressList) {
               this.keyPressList = [];
           }
-
+          //add key press to list
           if (this.keyPressList.length) {
               for (var i = this.keyPressList.length - 1; i >= 0; i--) {
                   if (this.keyPressList[i].direction === direction) {
@@ -102,17 +102,17 @@ angular.module("gameApp")
                     return;
                 }
 
-
+                //get direction from key press
                 var direction = processKeyCode(keyCode);
                 if (direction == characterDirection.none) {
                     console.log("THIS IS BAD FRIENDS");
                     return;
                 }
-
+                //initialize key press list
                 if (!this.keyPressList) {
                     this.keyPressList = [];
                 }
-
+                //add to key press list
                 if (this.keyPressList.length) {
                     for (var i = this.keyPressList.length - 1; i >= 0; i--) {
                         if (this.keyPressList[i].direction === direction) {
@@ -128,7 +128,8 @@ angular.module("gameApp")
                   console.log("second push: ", direction);
                 this.keyPressList.push(new KeyPressDetails(direction));
             },
-
+            //on key release, remove from key press list
+            //causes key press to stop being executed
             keyRelease: function(keyCode) {
                 if (isFireKey(keyCode)) {
                     if (angular.isUndefined(this.fireKeyStatus)) {
@@ -160,21 +161,23 @@ angular.module("gameApp")
                     }
                 }
             },
-
+            //returns the next key movement to  player.js from
+            //the key press list
             getNextMovement: function() {
 
                 var direction = characterDirection.none;
-
+                //get direction
                 if (this.keyPressList && this.keyPressList.length) {
                     direction = this.keyPressList[0].direction;
 
                     console.log("this is direction: ", direction);
-
-                    switch (this.keyPressList[0].keyPressType) {
+                    //get type as defined at top of file
+                    switch (this.keyPressList[0].keyPressType) {}
+                      //if key down and unprocessed, remain unprocessed
                         case KeyPressEnum.DownUnprocessed:
                             this.keyPressList[0].keyPressType = KeyPressEnum.DownProcessed;
                             break;
-
+                            //if key up, remove from list
                         case KeyPressEnum.Up:
                             this.keyPressList.splice(0, 1);
                             break;
