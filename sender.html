@@ -106,6 +106,8 @@ limitations under the License.
             session.addMessageListener(namespace, receiverMessage);
         }
 
+
+
         /**
          * listener for session updates
          */
@@ -165,6 +167,15 @@ limitations under the License.
             document.getElementById("play").style.display = "inline";
         }
 
+        function displayInstructions() {
+            document.getElementById("instructions").style.display = "inline";
+            console.log("clicked instructions");
+        }
+
+        function closeModal() {
+            document.getElementById("instructions").style.display = "none";
+        }
+
         //Function to send a message to the receiver
         function sendMessage(message) {
             if (session != null) {
@@ -219,6 +230,10 @@ limitations under the License.
         <br>
         <button class="button cast" type="button" onclick="connect()">Click To Cast!</button>
         <br>
+        <br>
+        <button class="button instructions_btn" type="button" onclick="displayInstructions()"> Instructions </button>
+
+
         <br>
 
     </section>
@@ -281,6 +296,45 @@ limitations under the License.
     <section id="info">
 
         Please turn phone to landscape mode!
+
+    </section>
+
+    <section id="instructions" style="display: none">
+
+        <button class="close" type="button" onclick="closeModal()">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </button>
+        <div class="modal-box">
+
+
+
+            <div class="instructions_box">
+                <h3>  Instructions </h3>
+
+                <p>
+                    In this world, everything is ruled by the evil centipede King Randeroo. Randeroo and his army of creatures will stop at nothing to kill you and end your progress. You must kill Randeroo before he reaches you, if he touches you then you will die. Use your missiles (up to 7 at a time) to shoot Randeroo and his creature army. But watch out, each time you hit Randeroo he splits into two faster moving versions of himself! Each level he gets harder and harder to kill, so be prepared. There are mushrooms throughout the level that no-one can dodge, even Randeroo himself, but you can shoot these mushrooms to get a better shot at the king. His creature army, while small, can really have an impact though. There is Sid the Spider, he will always be near where you are at the bottom. He eats mushrooms, which can be really helpful for you. But, he also eats people so never get too close. Freddy the Fly will also be coming for you. He flys from the top to the bottom of the level, spreading more mushrooms in his wake. He leaves long lines of mushrooms to disrupt everything. Sabrina the snail will slowly make her way across the level, never daring to come close to you. She does, however, give mushrooms strength, making them much harder to get rid of. It is up to you to topple the Randeroo empire… you are the last hope, good luck.
+                </p>
+
+                <p>
+                    To cast to the device, you click the “Click to Cast!” button on screen.
+                </p>
+
+                <p>
+                    Once connected, a gamepad will display on the screen. This is how you control the character.
+                </p>
+
+                <p>
+                    You must click the button multiple times to get the character to move more than one space. Each click will move the character a set number of pixels. This applies to the fire button as well, you must click the button as many times as you want missiles to be shot (up to 7 at a time).
+                </p>
+
+                <p>
+                    CONTROLS: Move up: arrow up Move down: arrow down Move left: arrow left Move right: arrow right Fire missile: A button Restart game after death: B button Pause game: grey button
+                </p>
+
+            </div>
+
+        </div>
+
 
     </section>
 

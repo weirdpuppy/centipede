@@ -112,6 +112,85 @@ td.arrows {
 .cast {
     border-radius: 20px;
     background-color: #8A1C7C;
+    margin-bottom: 10px;
+}
+
+.instructions_btn {
+    border-radius: 20px;
+    background-color: #8A1C7C;
+    margin-bottom: 10px;
+}
+
+#instructions {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3em;
+    padding: 50px;
+}
+
+.instructions_box p {
+    font-size: .5em;
+    font-family: Nunito;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.instructions_box h3 {
+    font-size: .9em;
+}
+
+.modal-box {
+    opacity: .8;
+}
+
+.close {
+    color: #fce17a;
+    text-align: left;
+    font-size: 1em;
+    z-index: 100;
+}
+
+.instructions_box {
+    background-color: purple;
+    padding: 10px 40px 10px 40px;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-width: 500px;
+    max-height: 500px;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
 
 .A {
