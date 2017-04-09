@@ -143,6 +143,9 @@ limitations under the License.
          * @param {string} message A message string
          */
         function connect() {
+            document.getElementById(splash).style.display = none;
+            document.getElementById(play).style.display = inline;
+
             message = 22;
             chrome.cast.requestSession(function (e) {
                 session = e;
@@ -153,6 +156,7 @@ limitations under the License.
         }
 
         function sendMessage(message) {
+
             if (session != null) {
                 console.log('sending message');
 
@@ -161,6 +165,7 @@ limitations under the License.
 
             } else {
                 connect();
+
             }
 
             console.log(message);
@@ -213,7 +218,7 @@ limitations under the License.
 
 
     <section id="play" style="display: none">
-        <div class="comtainer-fluid">
+        <div class="container-fluid">
 
             <table>
                 <tr>
