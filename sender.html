@@ -92,6 +92,8 @@ limitations under the License.
          */
         function onStopAppSuccess() {
             appendMessage('onStopAppSuccess');
+            document.getElementById("splash").style.display = "inline";
+            document.getElementById("play").style.display = "block;
         }
 
         /**
@@ -141,6 +143,7 @@ limitations under the License.
          */
         function stopApp() {
             session.stop(onStopAppSuccess, onError);
+
         }
 
         /**
@@ -160,8 +163,6 @@ limitations under the License.
         function displayController() {
             document.getElementById("splash").style.display = "none";
             document.getElementById("play").style.display = "inline";
-
-
         }
 
         //Function to send a message to the receiver
