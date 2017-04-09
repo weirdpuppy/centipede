@@ -32,8 +32,9 @@ limitations under the License.
     <script type="text/javascript" src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript">
-        console.log("Hi Roxanne");
+        //app id provided by registering with google
         var applicationID = '4E855571';
+        //namespace for the project
         var namespace = 'urn:x-cast:com.google.cast.sample.helloworld';
         var session = null;
 
@@ -49,19 +50,23 @@ limitations under the License.
          * initialization
          */
         function initializeCastApi() {
+          //request cast session with app id
             var sessionRequest = new chrome.cast.SessionRequest(applicationID);
             var apiConfig = new chrome.cast.ApiConfig(sessionRequest,
                 sessionListener,
                 receiverListener);
-
+                //initialize session
             chrome.cast.initialize(apiConfig, onInitSuccess, onError);
+          //create a new timeout
+            //curently not working, will be
+            //used to integrate with mobile?
             a = new chrome.cast.Timeout();
             a.sendCustomMessage = 70000;
-            console.log(a.sendCustomMessage);
         }
 
         /**
          * initialization success callback
+         * Adds message
          */
         function onInitSuccess() {
             appendMessage('onInitSuccess');
@@ -69,6 +74,7 @@ limitations under the License.
 
         /**
          * initialization error callback
+         * Adds error message
          */
         function onError(message) {
             appendMessage('onError: ' + JSON.stringify(message));
@@ -151,18 +157,19 @@ limitations under the License.
             }, onError);
 
         }
-
+        //Function to send a message to the receiver
         function sendMessage(message) {
+          //if currently connected, send message
             if (session != null) {
                 console.log('sending message');
 
                 session.sendMessage(namespace, message, onSuccess.bind(this, 'Message sent: ' + message),
                     onError);
 
-            } else {
+            } else { //if not connected, try to connect
                 connect();
             }
-
+            //message for debugging
             console.log(message);
         }
 
@@ -208,8 +215,8 @@ limitations under the License.
         <br>
 
     </section>
-    
-   
+
+
 
     <section style="display: none">
         <div class="comtainer-fluid">
@@ -261,27 +268,16 @@ limitations under the License.
                 </tr>
             </table>
 
-
-
-
-
-
             <!--action buttons -->
-
-
         </div>
 
     </section>
 
-
-
  <section id="info">
-    
+
             Please turn phone to landscape mode!
 
     </section>
-
-
 
     <!-- Debbugging output -->
     <div style="margin:10px; visibility:hidden;">

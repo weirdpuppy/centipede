@@ -1,7 +1,8 @@
 var paused = 0;
 
 angular.module("gameApp", [])
-
+//called by ng-controller in receiver.html
+//creats instance of cast receiver
     .controller("appController", ["$scope", "keyPressHandlerService", function($scope, keyPressHandlerService) {
       window.onload = function() {
         cast.receiver.logger.setLevelValue(0);
@@ -40,17 +41,21 @@ angular.module("gameApp", [])
               'urn:x-cast:com.google.cast.sample.helloworld');
 
         // handler for the CastMessageBus message event
+        //called when receiver created above gets data
         window.messageBus.onMessage = function(event) {
+          //print received message for debugging
           console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
           displayText(event.data);
 
-
+          //if pause message received, toggle paused flag
           if(event.data == 80) {
+            //if not paused, raise flag and display "play"
             if(paused == 1) {
               paused = 0;
               console.log ("play!")
             }
+            //if paused, reset flag and display "pause"
             else {
               console.log("pause!");
               paused = 1;
@@ -58,10 +63,11 @@ angular.module("gameApp", [])
 
           }
 
-
+          //if not pause message, spend data to key press handler
+          //simulate a key up AND key down to prevent continuous movement
           keyPressHandlerService.keyPress(event.data);
           keyPressHandlerService.keyRelease(event.data);
-          //keyPressHandlerService.keyPress == event.data;
+
 
 
           // inform all senders on the CastMessageBus of the incoming message event
@@ -83,11 +89,11 @@ angular.module("gameApp", [])
         window.castReceiverManager.setApplicationState(text);
       };
 
-      function triggerKeyDown() {
-        var e = new KeyboardEvent('keydown', {'key': 'ArrowLeft', 'code': "ArrowLeft", 'keyCode': 38,'which':38});
-        document.dispatchEvent(e);
-          console.log(e);
-      };
+  //    function triggerKeyDown() {
+    //    var e = new KeyboardEvent('keydown', {'key': 'ArrowLeft', 'code': "ArrowLeft", 'keyCode': 38,'which':38});
+    //    document.dispatchEvent(e);
+    //      console.log(e);
+    //  };
 
 
 /*
@@ -106,7 +112,7 @@ angular.module("gameApp", [])
 */
     }])
 
-
+//initialize game canvase and start game
     .directive("centipedeGame", ["$interval", "gameService", "renderService", "graphicsEngineService", function($interval, gameService, renderService, graphicsEngineService) {
         return {
             restrict: 'A',
@@ -119,7 +125,8 @@ angular.module("gameApp", [])
 
                 graphicsEngineService.initialise(canvas, 'App/img/graphics.png');
                 gameService.initialise();
-
+                //loop to keep game running
+                //cycle through, updating animations
                 function gameLoop() {
 
                     animation++;
@@ -127,12 +134,12 @@ angular.module("gameApp", [])
                     if (animation == 4) {
                         animation = 0;
                     }
-                    
+                    //if game is not paused, update the screen
                    if(paused != 1) {
                       gameService.update(animation);
                       renderService.draw(animation);
                   }
-                    
+
 
                 }
 

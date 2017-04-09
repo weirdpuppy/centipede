@@ -131,7 +131,7 @@ angular.module("gameApp")
                     moveCharacters(animation);
                 }
             }
-
+            //wait after death, then rengenerate
             function wait() {
               var start = new Date().getTime();
               var end = start;
