@@ -194,57 +194,74 @@ limitations under the License.
 </head>
 
 <body>
-    <section>
+    <section style="display:hidden;">
         <button class="button cast" type="button" onclick="connect()">Click To Cast!</button>
         <br>
         <br>
 
-        <div class="row">
-            <!-- arrow buttons -->
-            <div class="col-sm-4">
+    </section>
 
-                <div class="row">
-                    <button class="button" type="button" onclick="sendMessage(38)">
-                        <i class="fa fa-caret-up" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="row">
-                    <button class="button lr" type="button" onclick="sendMessage(37)">
-                        <i class="fa fa-caret-left" aria-hidden="true"></i>
-                    </button>
-                    <button class="button lr" type="button" onclick="sendMessage(39)">
-                        <i class="fa fa-caret-right" aria-hidden="true"></i>
-                    </button>
-
-                </div>
+    <section>
 
 
-                <button class="button" type="button" onclick="sendMessage(40)">
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                </button>
-            </div>
-            <!--pause button -->
-            <div class="col-sm-4">
-                <br>
-                <br>
-                <br>
-                <button class="button pause" type="button" onclick="sendMessage(80)">
+        <div class="comtainer-fluid">
 
-                </button>
-            </div>
+            <table>
+                <tr>
+                    <!--arrow buttons -->
+                    <th>
+                        <div class="row">
+                            <button class="button" type="button" onclick="sendMessage(38)">
+                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <button class="button lr" type="button" onclick="sendMessage(37)">
+                                <i class="fa fa-caret-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="button lr" type="button" onclick="sendMessage(39)">
+                                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </button>
 
-            <div class="col-sm-4">
-                <br>
-                <br>
-                <div class="row">
-                    <button class="button A" type="button" onclick="sendMessage(32)"> A </button>
-                </div>
-                <div class="row">
-                    <button class="button B" type="button" onclick="sendMessage(33)"> B </button>
-                </div>
-            </div>
+                        </div>
+
+
+                        <button class="button" type="button" onclick="sendMessage(40)">
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </button>
+                    </th>
+                    <th>
+                        <!--pause button -->
+
+                        <br>
+                        <br>
+                        <br>
+                        <button class="button pause" type="button" onclick="sendMessage(80)">
+
+                        </button>
+                    </th>
+                    <th>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <button class="button A" type="button" onclick="sendMessage(32)"> A </button>
+                        </div>
+                        <div class="row">
+                            <button class="button B" type="button" onclick="sendMessage(33)"> B </button>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+
+
+
+
+
+
+            <!--action buttons -->
+
+
         </div>
-
 
     </section>
 

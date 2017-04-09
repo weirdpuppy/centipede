@@ -20,6 +20,14 @@ body {
     padding: 0px 5px;
 }
 
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
 .button {
     display: inline-block;
     font-size: 1.5em;
@@ -33,6 +41,32 @@ body {
     border-radius: 50%;
     padding: 10px 20px 10px 20px;
     box-shadow: 0 9px #999;
+}
+
+.col-sm-4 {
+    width: 300px;
+}
+
+.arrow-box {
+    min-width: 100px;
+}
+
+.pause-box {
+    width: 50px;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 15px;
 }
 
 .pause {
