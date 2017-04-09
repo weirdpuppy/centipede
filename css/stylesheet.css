@@ -1,8 +1,9 @@
 body {
-    background-color: whitesmoke;
+    background-color: #452049;
     font-family: 'Slackey', cursive;
     text-align: center;
     overflow: hidden;
+    color: #D7DEDC;
 }
 
 .fa {
@@ -35,24 +36,35 @@ section {
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
     background-color: #fce17a;
     border: none;
     border-radius: 50%;
     padding: 10px 20px 10px 20px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px #630a6d;
 }
 
 #title {
     color: #35af79;
-    font-size: 6em;
+    font-size: 7em;
+    font-weight: 900;
+    letter-spacing: -2px;
+    font-family: "Nunito";
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 25px;
+    border: none;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 3px 3px 0 #316b49, 4px 4px 0 #316b49, 5px 5px 0 #316b49, 6px 6px 0 #316b49, 7px 7px 0 #316b49, 8px 8px 0 #316b49, 9px 9px 0 #316b49, 10px 10px 0 #316b49;
 }
 
 #subtitle {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 1.8em;
-    color: gray;
     margin-top: -30px;
 }
 
@@ -99,7 +111,7 @@ td.arrows {
 
 .cast {
     border-radius: 20px;
-    background-color: #ff5ca1;
+    background-color: #8A1C7C;
 }
 
 .A {
@@ -122,6 +134,5 @@ td.arrows {
 
 .button:active {
     opacity: .7;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    box-shadow: 0 5px #630a6d transform: translateY(4px);
 }
