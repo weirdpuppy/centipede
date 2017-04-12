@@ -1,3 +1,4 @@
+/*Original Game File - functions to keep track of game variables, like if player is alive*/
 angular.module("gameApp")
     .factory("gameStateService", ["globalSettings", "gameState", function(globalSettings, gameState) {
         "use strict";

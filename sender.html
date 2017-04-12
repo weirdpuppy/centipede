@@ -161,17 +161,17 @@ limitations under the License.
             }, onError);
 
         }
-
+        //remove splash screen and display controller
         function displayController() {
             document.getElementById("splash").style.display = "none";
             document.getElementById("play").style.display = "inline";
         }
-
+        //Display instructions - called on button click
         function displayInstructions() {
             document.getElementById("instructions").style.display = "inline";
             console.log("clicked instructions");
         }
-
+        //stop displaying instructions
         function closeModal() {
             document.getElementById("instructions").style.display = "none";
         }
@@ -220,6 +220,7 @@ limitations under the License.
 </head>
 
 <body>
+  <!--Main pager for sender-->
     <section id="splash" style="display:inline;">
         <p id="title">
             CENTIPEDE
@@ -228,9 +229,11 @@ limitations under the License.
             an arcade classic reimagined for chromecast
         </p>
         <br>
+        <!--Connect when 'click to cast' is activated-->
         <button class="button cast" type="button" onclick="connect()">Click To Cast!</button>
         <br>
         <br>
+        <!--Display instructions when 'instructions' is activated-->
         <button class="button instructions_btn" type="button" onclick="displayInstructions()"> Instructions </button>
 
 
@@ -238,7 +241,7 @@ limitations under the License.
 
     </section>
 
-
+<!--Controller display-->
     <section id="play" style="display: none">
         <div class="container-fluid">
 
@@ -292,7 +295,7 @@ limitations under the License.
         </div>
 
     </section>
-
+<!--force phone into landscape mode-->
     <section id="info">
 
         Please turn phone to landscape mode!
@@ -301,8 +304,8 @@ limitations under the License.
 
     <section id="instructions" style="display: none">
 
-        
 
+<!--Instructions to display-->
         <div class="instructions_box">
             <div class="text-box">
                 <h3>  Instructions </h3>

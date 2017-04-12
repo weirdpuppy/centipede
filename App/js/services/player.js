@@ -1,3 +1,4 @@
+/*Original Game File - helps translate user input to player behavior*/
 angular.module("gameApp")
     .factory("playerService", ["globalSettings", "gameBoardService", "graphicsEngineService", "sprite", "characterDirection", "characterState", "keyPressHandlerService", "coordinateSystem",
         function(globalSettings, gameBoardService, graphicsEngineService, sprite, characterDirection, characterState, keyPressHandlerService, coordinateSystem) {

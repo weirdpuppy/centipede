@@ -1,3 +1,4 @@
+/*Original Game File - helps with displaying the game*/
 angular.module("gameApp")
     .factory("renderService", ["graphicsEngineService", "gameBoardService", "globalSettings", "gameStateService", "sprite", "scoreMarkerService", "spiderService", "fleaService", "snailService", "centipedeService", "bulletService", "playerService", "coordinateSystem",
         function(graphicsEngineService, gameBoardService, globalSettings, gameStateService, sprite, scoreMarkerService, spiderService, fleaService, snailService, centipedeService, bulletService, playerService, coordinateSystem) {
@@ -32,8 +33,8 @@ angular.module("gameApp")
                         globalSettings.gameOverFontColour,
                         globalSettings.gameOverFont);
                 }
-                
-                    
+
+
             }
 
             function drawScoreBoard(animation) {

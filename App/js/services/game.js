@@ -1,3 +1,4 @@
+/*Original Game File - functions used in gameplay, like to change levels, move player, etc*/
 angular.module("gameApp")
     .factory("gameService", ["graphicsEngineService", "gameBoardService", "globalSettings", "utilsService", "gameStateService", "boardLocation", "characterState", "characterDirection", "sprite", "scoreMarkerService", "spiderService", "fleaService", "snailService", "centipedeService", "bulletService", "playerService", "gameState", "keyPressHandlerService",
         function(graphicsEngineService, gameBoardService, globalSettings, utilsService, gameStateService, boardLocation, characterState, characterDirection, sprite, scoreMarkerService, spiderService, fleaService, snailService, centipedeService, bulletService, playerService, gameState, keyPressHandlerService) {

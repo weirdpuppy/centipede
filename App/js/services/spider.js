@@ -1,3 +1,4 @@
+/*Original Game File - controls behavior of spider*/
 angular.module("gameApp")
     .factory("spiderService", ["globalSettings", "gameBoardService", "graphicsEngineService", "sprite", "utilsService", "playerService", "coordinateSystem",
         function(globalSettings, gameBoardService, graphicsEngineService, sprite, utilsService, playerService, coordinateSystem) {

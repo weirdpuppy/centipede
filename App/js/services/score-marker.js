@@ -1,3 +1,4 @@
+/*Original Game File - functions to help with keeping score*/
 angular.module("gameApp")
     .factory("scoreMarkerService", ["globalSettings", "graphicsEngineService", "characterState", "coordinateSystem", function(globalSettings, graphicsEngineService, characterState, coordinateSystem) {
         "use strict";

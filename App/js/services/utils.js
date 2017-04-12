@@ -1,3 +1,5 @@
+/*Original Game File - helps implement randomness*/
+
 angular.module("gameApp")
     .factory("utilsService", [function() {
         return {

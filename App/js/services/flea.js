@@ -1,3 +1,4 @@
+/*Original Game File - controls behavior of flea*/
 angular.module("gameApp")
     .factory("fleaService", ["globalSettings", "gameBoardService", "graphicsEngineService", "sprite", "utilsService", "coordinateSystem", function(globalSettings, gameBoardService, graphicsEngineService, sprite, utilsService, coordinateSystem) {
         "use strict";

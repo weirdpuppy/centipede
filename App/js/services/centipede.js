@@ -1,3 +1,4 @@
+/*Original Game File - controls behavior of centipede */
 angular.module("gameApp")
     .factory("centipedeService", ["globalSettings", "graphicsEngineService", "gameBoardService", "characterDirection", "boardLocation", "sprite", "characterState", "coordinateSystem",
     function(globalSettings, graphicsEngineService, gameBoardService, characterDirection, boardLocation, sprite, characterState, coordinateSystem) {
@@ -44,7 +45,7 @@ angular.module("gameApp")
                 centipede.currentDirection = centipede.previousDirection;
             }
         };
-        
+
         var moveCentipede = function(centipede, animation) {
             if ((animation + 1) % centipede.framesPerMove !== 0) {
                 return;

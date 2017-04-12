@@ -1,3 +1,4 @@
+/*Original Game File - controls behavior of snail*/
 angular.module("gameApp")
     .factory("snailService", ["globalSettings", "gameBoardService", "graphicsEngineService", "sprite", "utilsService", "coordinateSystem", function(globalSettings, gameBoardService, graphicsEngineService, sprite, utilsService, coordinateSystem) {
         "use strict";

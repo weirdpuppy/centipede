@@ -12,34 +12,9 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <style type="text/css">
-      body {
-        overflow:hidden;
-      }
-      div{
-        height:720PX;
-        width:1280PX;
-        text-align:center;
-        border:0px solid silver;
-        display: table-cell;
-        vertical-align:middle;
-        color:white;
-        background-color:pink;
-        font-weight:bold;
-        font-family:Verdana, Geneva, sans-serif;
-        font-size:100px;
-      }
-    </style>
-    <title>Cast Hello Text</title>
-  </head>
-  <body>
-  <div id="message">Talk to me!</div>
 -->
 
+<!--Registered app file - loads all scripts needed by game-->
 <html lang="en" ng-app="gameApp">
 <head>
     <link rel="stylesheet" type="text/css" href="App/css/centipede.css">
@@ -48,27 +23,11 @@ limitations under the License.
 
 <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 
-
-<!--<body ng-controller="appController" ng-keydown="keydown($event)" ng-keyup="keyup($event)"  style="background-color:darkgrey">
--->
 <body>
-<!--
-    <div data-ng-if="!instructionsDisplayed" class="instructions">
-        <h2>Instructions!!</h2>
-        <p>Shoot everything and stay alive</p>
-        <p>Arrow Keys to move</p>
-        <p>Space bar to fire</p>
-        <br>
-        <p>Press any key to start</p>
-    </div>
--->
+
       <div id="message" style="text-align:center;">Talk to me!</div>
 
 <div ng-controller="appController" centipede-game/>
-
-
-
-    <!--<div data-ng-if="instructionsDisplayed" centipede-game/>-->
 
     <script src="App/lib/angular.min.js"></script>
     <script src="App/gameApp.js"></script>

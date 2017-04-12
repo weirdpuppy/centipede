@@ -1,3 +1,4 @@
+/*Original Game File - controls behavior of the bullet that is fired*/
 angular.module("gameApp")
     .factory("bulletService", ["globalSettings", "graphicsEngineService", "gameBoardService", "boardLocation", "scoreMarkerService", "fleaService", "snailService", "spiderService", "centipedeService", "characterState", "sprite", "gameStateService", "coordinateSystem",
         function(globalSettings, graphicsEngineService, gameBoardService, boardLocation, scoreMarkerService, fleaService, snailService, spiderService, centipedeService, characterState, sprite, gameStateService, coordinateSystem) {
