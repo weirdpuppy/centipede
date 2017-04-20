@@ -127,8 +127,7 @@ angular.module("gameApp", [])
 
             graphicsEngineService.initialise(canvas, 'App/img/graphics.png');
             gameService.initialise();
-
-
+            
             var background = new Image();
             background.src = "App/img/bg.png";
 
@@ -137,6 +136,8 @@ angular.module("gameApp", [])
                 canvas.drawImage(background, 0, 0);
             }
 
+
+            
             //loop to keep game running
             //cycle through, updating animations
             function gameLoop() {
