@@ -23,7 +23,7 @@ angular.module("gameApp")
         gameOverXPosition: 210,
         gameOverYPosition: 300,
         gameOverFontColour: "yellow",
-        gameOverFont: "32px Arial bold",
+        gameOverFont: "Slackey",
 
         gameBoardWidth: 30,
         gameBoardHeight: 30,
