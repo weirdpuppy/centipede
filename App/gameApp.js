@@ -118,7 +118,7 @@ angular.module("gameApp", [])
 .directive("centipedeGame", ["$interval", "gameService", "renderService", "graphicsEngineService", function ($interval, gameService, renderService, graphicsEngineService) {
     return {
         restrict: 'A',
-        template: '<canvas id="gameCanvas" width="600" height="640" style="text-align: center; position: absolute; background-color: blue; left:50%; top: 50%; transform: translate(-50%,-50%);"></canvas>',
+        template: '<canvas id="gameCanvas" width="600" height="640" style="text-align: center; position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);"></canvas>',
 
         link: function (scope, element) {
             var intervalPromise;
@@ -127,6 +127,16 @@ angular.module("gameApp", [])
 
             graphicsEngineService.initialise(canvas, 'App/img/graphics.png');
             gameService.initialise();
+
+
+            var background = new Image();
+            background.src = "App/img/bg.png";
+
+            // Make sure the image is loaded first otherwise nothing will draw.
+            background.onload = function () {
+                canvas.drawImage(background, 0, 0);
+            }
+
             //loop to keep game running
             //cycle through, updating animations
             function gameLoop() {
