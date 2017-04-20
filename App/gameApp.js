@@ -149,7 +149,7 @@ angular.module("gameApp", [])
                         300,
                         "Paused",
                         "yellow",
-                        "32px Arial bold");
+                        "48px Lucida Console");
                 }
 
 
