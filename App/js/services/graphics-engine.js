@@ -23,9 +23,9 @@ angular.module("gameApp")
                 // var background = document.getElementById('background');
                 //this.canvas.drawImage(background, 0, 0);
                 // var img = new Image;
-                //img.src = globalSettings.gameBoardBackgroundURL;
+                img.src = globalSettings.gameBoardBackgroundColor;
                 //this.canvas.drawImage(img, 0, 0);
-                //this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
+                this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
             },
 
             drawText: function (coordSystem, x, y, text, colour, font) {
