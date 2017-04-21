@@ -20,8 +20,7 @@ angular.module("gameApp")
             },
 
             blankScreen: function () {
-                // var background = document.getElementById('background');
-                //this.canvas.drawImage(background, 0, 0);
+
                 this.canvas.fillStyle = globalSettings.gameBoardBackgroundColour;
                 this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
             },
@@ -41,6 +40,13 @@ angular.module("gameApp")
                     x = this.convertGameXCoordinateToPixels(x);
                     y = this.convertGameYCoordinateToPixels(y);
                 }
+
+                var img = new Image;
+                img.src = "http://imgur.com/a/yEFp2";
+
+
+                this.canvas.drawImage(img, 0, 0);
+
                 this.canvas.drawImage(
                     this.spriteSheet,
                     this.spriteWidth * (image % globalSettings.spriteSheetWidth),
