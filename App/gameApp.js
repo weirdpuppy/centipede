@@ -91,27 +91,6 @@ angular.module("gameApp", [])
             window.castReceiverManager.setApplicationState(text);
         };
 
-        //    function triggerKeyDown() {
-        //    var e = new KeyboardEvent('keydown', {'key': 'ArrowLeft', 'code': "ArrowLeft", 'keyCode': 38,'which':38});
-        //    document.dispatchEvent(e);
-        //      console.log(e);
-        //  };
-
-
-        /*
-
-                $scope.keydown = function(keyEvent) {
-                    if (!$scope.instructionsDisplayed) {
-                        $scope.instructionsDisplayed = true;
-                        return;
-                    }
-                    keyPressHandlerService.keyPress(keyEvent.key);
-                };
-
-                $scope.keyup = function(keyEvent) {
-                    keyPressHandlerService.keyRelease(keyEvent.key);
-                };
-        */
     }])
 
 //initialize game canvase and start game

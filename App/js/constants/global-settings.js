@@ -1,6 +1,6 @@
 angular.module("gameApp")
     .constant("globalSettings", {
-        spriteSize: 20,
+        spriteSize: 40,
         spriteSheetWidth: 4,
         playerAreaHeight: 6,
 
