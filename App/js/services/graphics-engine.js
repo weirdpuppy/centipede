@@ -21,11 +21,11 @@ angular.module("gameApp")
 
             blankScreen: function () {
                 var img = new Image;
-                img.src = "http://imgur.com/a/yEFp2";
+                img.src = "http://i.imgur.com/ZxAEzCc.png";
                 var pat = this.canvas.createPattern(img, "no-repeat");
 
 
-                this.canvas.rect(0, 0, 150, 100);
+                this.canvas.rect(0, 0, 350, 300);
                 this.canvas.fillStyle = pat;
                 this.canvas.fill();
                 //this.canvas.fillStyle = globalSettings.gameBoardBackgroundColour;
