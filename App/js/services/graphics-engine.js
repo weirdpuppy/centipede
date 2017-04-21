@@ -41,13 +41,6 @@ angular.module("gameApp")
                     y = this.convertGameYCoordinateToPixels(y);
                 }
 
-                var img = new Image;
-                img.src = "http://imgur.com/a/yEFp2";
-
-
-                this.canvas.drawImage(img, 0, 0);
-
-
                 this.canvas.drawImage(
                     this.spriteSheet,
                     this.spriteWidth * (image % globalSettings.spriteSheetWidth),
