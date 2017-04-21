@@ -23,10 +23,10 @@ angular.module("gameApp")
                 var img = new Image;
                 img.src = "http://imgur.com/a/yEFp2";
                 var pat = this.canvas.createPattern(img, "no-repeat");
-                this.canvas.rect(0, 0, 300, 300);
+                this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
                 this.canvas.fillStyle = pat;
                 //this.canvas.fillStyle = globalSettings.gameBoardBackgroundColour;
-                this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
+
             },
 
             drawText: function (coordSystem, x, y, text, colour, font) {
