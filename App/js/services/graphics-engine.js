@@ -38,7 +38,17 @@ angular.module("gameApp")
                     x = this.convertGameXCoordinateToPixels(x);
                     y = this.convertGameYCoordinateToPixels(y);
                 }
-                this.canvas.fillStyle = colour;
+                var img = new Image;
+                img.src = "http://i.imgur.com/lsnkY00.png";
+                var pat = this.canvas.createPattern(img, "repeat");
+
+
+                this.canvas.rect(0, 0, 350, 30);
+                this.canvas.fillStyle = pat;
+                this.canvas.fill();
+
+
+
                 this.canvas.font = font;
                 this.canvas.fillText(text, x, y)
             },
