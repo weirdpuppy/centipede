@@ -27,7 +27,7 @@ angular.module("gameApp")
 
         gameBoardWidth: 30,
         gameBoardHeight: 30,
-        gameBoardBackgroundColour: "black",
+        gameBoardBackgroundURL: "http://imgur.com/a/yEFp2",
 
         centipedeFramesPerMoveNormalSpeed: 2,
         centipedeFramesPerMoveHighSpeed: 1,

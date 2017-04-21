@@ -22,8 +22,10 @@ angular.module("gameApp")
             blankScreen: function () {
                 // var background = document.getElementById('background');
                 //this.canvas.drawImage(background, 0, 0);
-                this.canvas.fillStyle = globalSettings.gameBoardBackgroundColour;
-                this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
+                var img = new Image;
+                img.src = globalSettings.gameBoardBackgroundURL;
+                this.canvas.drawImage(img, 0, 0);
+                //this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
             },
 
             drawText: function (coordSystem, x, y, text, colour, font) {
