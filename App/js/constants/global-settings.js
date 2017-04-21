@@ -22,12 +22,12 @@ angular.module("gameApp")
 
         gameOverXPosition: 210,
         gameOverYPosition: 300,
-        gameOverFontColour: "#fce17a",
+        gameOverFontColour: "yellow",
         gameOverFont: "48px Lucida Console",
 
         gameBoardWidth: 30,
         gameBoardHeight: 30,
-        gameBoardBackgroundColour: "purple",
+        gameBoardBackgroundColour: "black",
 
         centipedeFramesPerMoveNormalSpeed: 2,
         centipedeFramesPerMoveHighSpeed: 1,
