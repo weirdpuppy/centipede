@@ -25,7 +25,7 @@ angular.module("gameApp")
                 var pat = this.canvas.createPattern(img, "no-repeat");
 
 
-                this.canvas.rect(0, 0, 150, 200);
+                this.canvas.rect(0, 0, 150, 100);
                 this.canvas.fillStyle = pat;
                 this.canvas.fill();
                 //this.canvas.fillStyle = globalSettings.gameBoardBackgroundColour;
