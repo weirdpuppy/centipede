@@ -22,7 +22,8 @@ angular.module("gameApp")
             blankScreen: function () {
                 var img = new Image;
                 img.src = "http://imgur.com/a/yEFp2";
-                var pat = this.canvas.createPattern(img, "repeat");
+                var pat = this.canvas.createPattern(img, "no-repeat");
+                this.canvas.rect(0, 0, 300, 300);
                 this.canvas.fillStyle = pat;
                 //this.canvas.fillStyle = globalSettings.gameBoardBackgroundColour;
                 this.canvas.fillRect(0, 0, globalSettings.gameBoardWidth * this.spriteWidth, globalSettings.scoreBoardArea + (globalSettings.gameBoardHeight * this.spriteHeight));
