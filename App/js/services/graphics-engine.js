@@ -47,6 +47,7 @@ angular.module("gameApp")
 
                 this.canvas.drawImage(img, 0, 0);
 
+                /*
                 this.canvas.drawImage(
                     this.spriteSheet,
                     this.spriteWidth * (image % globalSettings.spriteSheetWidth),
@@ -57,6 +58,7 @@ angular.module("gameApp")
                     y,
                     this.spriteWidth,
                     this.spriteHeight);
+                    */
             }
         }
     }]);
