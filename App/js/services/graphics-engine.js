@@ -40,10 +40,10 @@ angular.module("gameApp")
                 }
                 var img = new Image;
                 img.src = "http://i.imgur.com/lsnkY00.png";
-                var pat = this.canvas.createPattern(img, "repeat");
+                var pat = this.canvas.createPattern(img, "no-repeat");
 
 
-                this.canvas.rect(0, 0, 350, 30);
+                this.canvas.rect(0, 0, 100, 10);
                 this.canvas.fillStyle = pat;
                 this.canvas.fill();
 
