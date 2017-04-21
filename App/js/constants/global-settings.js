@@ -27,7 +27,7 @@ angular.module("gameApp")
 
         gameBoardWidth: 30,
         gameBoardHeight: 30,
-        gameBoardBackgroundColor: "purple",
+        gameBoardBackgroundColour: "purple",
 
         centipedeFramesPerMoveNormalSpeed: 2,
         centipedeFramesPerMoveHighSpeed: 1,
