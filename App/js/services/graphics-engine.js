@@ -21,7 +21,7 @@ angular.module("gameApp")
 
             blankScreen: function () {
                 var img = new Image;
-                img.src = "http://i.imgur.com/vCFO9ij.png";
+                img.src = "http://i.imgur.com/bQb05XF.png";
                 var pat = this.canvas.createPattern(img, "repeat");
 
 
@@ -38,8 +38,8 @@ angular.module("gameApp")
                     x = this.convertGameXCoordinateToPixels(x);
                     y = this.convertGameYCoordinateToPixels(y);
                 }
-                
-                
+
+
                 this.canvas.fillStyle = colour;
 
                 this.canvas.font = font;
