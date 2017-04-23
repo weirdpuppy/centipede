@@ -8,7 +8,7 @@ angular.module("gameApp")
 
         scoreMarkerFont: "26px Slackey",
         scoreBoardFont: "16px Slackey",
-        scoreBoardTitleFontColour: "#422354",
+        scoreBoardTitleFontColour: "#22513d",
         scoreBoardContentFontColour: "white",
         scoreBoardLivesXPositionText: 60,
         scoreBoardLivesXPositionImage: 45,
