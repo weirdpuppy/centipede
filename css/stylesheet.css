@@ -21,8 +21,6 @@ body {
     padding: 0px 5px;
 }
 
-
-
 section {
     position: absolute;
     left: 50%;
@@ -91,6 +89,37 @@ section {
         margin-right: auto;
         font-size: 3em;
         padding: 50px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    section {
+        width: 100%;
+    }
+    .pause {
+        margin-left: 50%;
+    }
+    .A {
+        margin-left: 50%;
+    }
+    .B {
+        margin-right: -50%;
+    }
+    .button {
+        font-size: 2em;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        background-color: #fce17a;
+        border: none;
+        border-radius: 50%;
+        padding: 5px 20px 5px 20px;
+        box-shadow: 0 9px #2b0430;
+    }
+    .pause {
+        padding: 15px 30px 15px 30px
     }
 }
 
