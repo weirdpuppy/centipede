@@ -6,10 +6,10 @@ angular.module("gameApp")
 
         scoreBoardArea: 40,
 
-        scoreMarkerFont: "10px Lucida Console",
-        scoreBoardFont: "16px Lucida Console",
-        scoreBoardTitleFontColour: "#5daf7e",
-        scoreBoardContentFontColour: "#d3d3d3",
+        scoreMarkerFont: "20px Lucida Console",
+        scoreBoardFont: "26px Lucida Console",
+        scoreBoardTitleFontColour: "white",
+        scoreBoardContentFontColour: "white",
         scoreBoardLivesXPositionText: 50,
         scoreBoardLivesXPositionImage: 45,
         scoreBoardScoreXPosition: 200,
@@ -22,7 +22,7 @@ angular.module("gameApp")
 
         gameOverXPosition: 210,
         gameOverYPosition: 300,
-        gameOverFontColour: "yellow",
+        gameOverFontColour: "#dfc223",
         gameOverFont: "48px Lucida Console",
 
         gameBoardWidth: 30,
