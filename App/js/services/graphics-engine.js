@@ -38,10 +38,8 @@ angular.module("gameApp")
                     x = this.convertGameXCoordinateToPixels(x);
                     y = this.convertGameYCoordinateToPixels(y);
                 }
-
-
-
-
+                
+                
                 this.canvas.fillStyle = colour;
 
                 this.canvas.font = font;
