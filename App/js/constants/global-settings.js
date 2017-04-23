@@ -8,15 +8,15 @@ angular.module("gameApp")
 
         scoreMarkerFont: "26px Slackey",
         scoreBoardFont: "16px Slackey",
-        scoreBoardTitleFontColour: "#1e4443",
+        scoreBoardTitleFontColour: "#565523",
         scoreBoardContentFontColour: "white",
         scoreBoardLivesXPositionText: 50,
         scoreBoardLivesXPositionImage: 45,
         scoreBoardScoreXPosition: 200,
         scoreBoardLevelXPosition: 350,
         scoreBoardHighScoreXPosition: 500,
-        scoreBoardTitleYPosition: 15,
-        scoreBoardContentYPosition: 35,
+        scoreBoardTitleYPosition: 20,
+        scoreBoardContentYPosition: 30,
         scoreBoardLivesYPosition: 20,
         scoreBoardLivesOffset: 15,
 
