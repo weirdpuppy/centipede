@@ -127,7 +127,7 @@ angular.module("gameApp", [])
                         170,
                         320,
                         "Paused!",
-                        "#5daf7e",
+                        "#dfc223",
                         "48px Slackey");
                 }
 
