@@ -16,20 +16,25 @@ limitations under the License.
 
 <!--Registered app file - loads all scripts needed by game-->
 <html lang="en" ng-app="gameApp">
+
 <head>
     <link rel="stylesheet" type="text/css" href="App/css/centipede.css">
     <title>Centipede</title>
 </head>
-     
+
 <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Slackey|Chelsea+Market|" rel="stylesheet">
 
 <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 
 <body>
 
-      <div id="message" style="text-align:center;">Talk to me!</div>
 
-<div ng-controller="appController" centipede-game/>
+    <div class="frame">
+        <img src="App/img/frame.png" style="width: 960px; height: 670px;">
+    </div>
+
+
+    <div ng-controller="appController" centipede-game/>
 
     <script src="App/lib/angular.min.js"></script>
     <script src="App/gameApp.js"></script>
