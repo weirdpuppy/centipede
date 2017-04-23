@@ -17,8 +17,8 @@ angular.module("gameApp")
         scoreBoardHighScoreXPosition: 450,
         scoreBoardTitleYPosition: 30,
         scoreBoardContentYPosition: 45,
-        scoreBoardLivesYPosition: 40,
-        scoreBoardLivesOffset: 10,
+        scoreBoardLivesYPosition: 30,
+        scoreBoardLivesOffset: 20,
 
         gameOverXPosition: 350,
         gameOverYPosition: 300,
