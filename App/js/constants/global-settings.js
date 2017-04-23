@@ -21,7 +21,7 @@ angular.module("gameApp")
         scoreBoardLivesOffset: 30,
 
         gameOverXPosition: 350,
-        gameOverYPosition: 300,
+        gameOverYPosition: 330,
         gameOverFontColour: "#dfc223",
         gameOverFont: "48px Slackey",
 
