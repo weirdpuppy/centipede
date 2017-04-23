@@ -40,8 +40,8 @@ angular.module("gameApp")
         maxMushroomsAllowed: 140,
         minMushroomsInPlayerAreaBeforeFleaCreated: 5,
 
-        maxCentipedes: 9,
-        centipedeMinimumLength: 10,
+        maxCentipedes: 6,
+        centipedeMinimumLength: 7,
 
         delayAfterDeathBeforePlayerRegeneration: 1000,
         delayAfterDeathBeforeNewGameStart: 1500,
