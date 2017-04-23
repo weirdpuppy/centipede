@@ -1,6 +1,6 @@
 angular.module("gameApp")
     .constant("globalSettings", {
-        spriteSize: 30,
+        spriteSize: 29,
         spriteSheetWidth: 4,
         playerAreaHeight: 6,
 
@@ -25,7 +25,7 @@ angular.module("gameApp")
         gameOverFontColour: "#dfc223",
         gameOverFont: "48px Slackey",
 
-        gameBoardWidth: 50,
+        gameBoardWidth: 20,
         gameBoardHeight: 12,
         gameBoardBackgroundColour: "black",
 
