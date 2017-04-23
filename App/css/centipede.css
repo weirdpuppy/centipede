@@ -9,3 +9,16 @@
     transform: translate(-50%, -50%);
     z-index: 100;
 }
+
+body {
+    background: #452049;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#452049, #2b0430);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#452049, #2b043);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#452049, #2b043);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#452049, #2b043);
+    /* Standard syntax (must be last) */
+}
