@@ -92,7 +92,7 @@ section {
     }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 650px) {
     section {
         width: 100%;
     }
