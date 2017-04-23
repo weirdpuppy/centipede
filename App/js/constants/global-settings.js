@@ -25,8 +25,8 @@ angular.module("gameApp")
         gameOverFontColour: "#dfc223",
         gameOverFont: "48px Slackey",
 
-        gameBoardWidth: 90,
-        gameBoardHeight: 60,
+        gameBoardWidth: 40,
+        gameBoardHeight: 30,
         gameBoardBackgroundColour: "black",
 
         centipedeFramesPerMoveNormalSpeed: 2,
