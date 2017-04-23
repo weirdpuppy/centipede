@@ -1,8 +1,8 @@
 angular.module("gameApp")
     .constant("globalSettings", {
-        spriteSize: 40,
-        spriteSheetWidth: 8,
-        playerAreaHeight: 12,
+        spriteSize: 30,
+        spriteSheetWidth: 6,
+        playerAreaHeight: 6,
 
         scoreBoardArea: 40,
 
@@ -15,12 +15,12 @@ angular.module("gameApp")
         scoreBoardScoreXPosition: 200,
         scoreBoardLevelXPosition: 350,
         scoreBoardHighScoreXPosition: 450,
-        scoreBoardTitleYPosition: 20,
-        scoreBoardContentYPosition: 35,
-        scoreBoardLivesYPosition: 20,
+        scoreBoardTitleYPosition: 30,
+        scoreBoardContentYPosition: 45,
+        scoreBoardLivesYPosition: 40,
         scoreBoardLivesOffset: 15,
 
-        gameOverXPosition: 150,
+        gameOverXPosition: 350,
         gameOverYPosition: 300,
         gameOverFontColour: "#dfc223",
         gameOverFont: "48px Slackey",

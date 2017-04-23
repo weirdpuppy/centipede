@@ -124,7 +124,7 @@ angular.module("gameApp", [])
                 } else {
                     graphicsEngineService.drawText(
                         1,
-                        170,
+                        370,
                         320,
                         "Paused!",
                         "#dfc223",
