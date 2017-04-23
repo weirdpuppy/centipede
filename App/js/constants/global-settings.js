@@ -2,7 +2,7 @@ angular.module("gameApp")
     .constant("globalSettings", {
         spriteSize: 30,
         spriteSheetWidth: 6,
-        playerAreaHeight: 6,
+        playerAreaHeight: 3,
 
         scoreBoardArea: 40,
 
