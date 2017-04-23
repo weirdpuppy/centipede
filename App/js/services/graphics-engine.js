@@ -21,7 +21,7 @@ angular.module("gameApp")
 
             blankScreen: function () {
                 var img = new Image;
-                img.src = "http://i.imgur.com/q5UdiFj.png";
+                img.src = "http://i.imgur.com/oy607xa.png";
                 var pat = this.canvas.createPattern(img, "no-repeat");
 
 
