@@ -21,7 +21,7 @@ angular.module("gameApp")
 
             blankScreen: function () {
                 var img = new Image;
-                img.src = "http://i.imgur.com/tRbwjj7.png";
+                img.src = "../../img/bg.png";
                 var pat = this.canvas.createPattern(img, "repeat");
 
 
@@ -38,8 +38,10 @@ angular.module("gameApp")
                     x = this.convertGameXCoordinateToPixels(x);
                     y = this.convertGameYCoordinateToPixels(y);
                 }
+
+                /*
                 var img = new Image;
-                img.src = "http://i.imgur.com/lsnkY00.png";
+                img.src = "../../images/bg.png";
                 var pat = this.canvas.createPattern(img, "no-repeat");
 
 
@@ -47,7 +49,7 @@ angular.module("gameApp")
                 this.canvas.fillStyle = pat;
                 this.canvas.fill();
 
-
+*/
 
                 this.canvas.font = font;
                 this.canvas.fillText(text, x, y)
