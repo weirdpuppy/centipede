@@ -124,10 +124,10 @@ angular.module("gameApp", [])
                 } else {
                     graphicsEngineService.drawText(
                         1,
-                        150,
+                        170,
                         320,
                         "Paused!",
-                        "#dfc223",
+                        "#5daf7e",
                         "48px Slackey");
                 }
 
