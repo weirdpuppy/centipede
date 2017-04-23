@@ -127,8 +127,8 @@ angular.module("gameApp", [])
                         210,
                         300,
                         "Paused",
-                        "yellow",
-                        "48px Lucida Console");
+                        "#dfc223",
+                        "48px Slackey");
                 }
 
 
