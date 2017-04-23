@@ -39,17 +39,9 @@ angular.module("gameApp")
                     y = this.convertGameYCoordinateToPixels(y);
                 }
 
-                ctx.fillStyle = 'rgba(225,225,225,0.5)';
-                ctx.fillRect(0, 0, 600, 600);
-                /*
-                var img = new Image;
-                img.src = "../../images/bg.png";
-                var pat = this.canvas.createPattern(img, "no-repeat");
+                this.canvas.fillStyle = 'rgba(225,225,225,0.5)';
+                this.canvas.fillRect(0, 0, 600, 600);
 
-
-                this.canvas.rect(0, 0, 100, 10);
-                this.canvas.fillStyle = pat;
-                */
 
                 this.canvas.fillStyle = colour;
 
