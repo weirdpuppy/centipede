@@ -4,7 +4,7 @@ angular.module("gameApp")
         spriteSheetWidth: 4,
         playerAreaHeight: 12,
 
-        scoreBoardArea: 40,
+        scoreBoardArea: 50,
 
         scoreMarkerFont: "26px Slackey",
         scoreBoardFont: "16px Slackey",
