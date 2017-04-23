@@ -48,7 +48,8 @@ angular.module("gameApp")
                 this.canvas.rect(0, 0, 100, 10);
                 this.canvas.fillStyle = pat;
                 */
-                this.canvas.fill();
+
+                this.canvas.fillStyle = colour;
 
                 this.canvas.font = font;
                 this.canvas.fillText(text, x, y)
