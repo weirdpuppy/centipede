@@ -124,7 +124,8 @@ angular.module("gameApp")
 
             function playerDeathTransitionUpdate(animation) {
                 var keyPress = keyPressHandlerService.getNextMovement();
-              //  if (gameStateService.hasPlayerDeathTransitionComplete() && keyPress.isFiring) {
+              //Changed by UK CS 499 Group - remove "isFiring" check
+              //auto respawn instead of pressing fire
               if (gameStateService.hasPlayerDeathTransitionComplete()) {
                     wait();
                     resetAfterPlayerRegeneration();

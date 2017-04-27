@@ -4,6 +4,7 @@ angular.module("gameApp", [])
     //called by ng-controller in receiver.html
     //creats instance of cast receiver
     .controller("appController", ["$scope", "keyPressHandlerService", function ($scope, keyPressHandlerService) {
+//Added Spring 2017 by UK CS499 Group
         window.onload = function () {
             cast.receiver.logger.setLevelValue(0);
             window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
@@ -92,6 +93,7 @@ angular.module("gameApp", [])
         };
 
     }])
+//End cs 499 addition
 
 //initialize game canvase and start game
 .directive("centipedeGame", ["$interval", "gameService", "renderService", "graphicsEngineService", function ($interval, gameService, renderService, graphicsEngineService) {
@@ -117,11 +119,17 @@ angular.module("gameApp", [])
                 if (animation == 4) {
                     animation = 0;
                 }
+
+                //Added Spring 2017 by UK CS499 Group
+
                 //if game is not paused, update the screen
                 if (paused != 1) {
                     gameService.update(animation);
                     renderService.draw(animation);
-                } else {
+                }
+                // if game is paused, display "Paused" on screen
+                //do not update animation or game variables
+                else {
                     graphicsEngineService.drawText(
                         1,
                         320,
@@ -130,7 +138,7 @@ angular.module("gameApp", [])
                         "#dfc223",
                         "48px Slackey");
                 }
-
+                //end CS 499 Addition
 
             }
 
@@ -140,7 +148,7 @@ angular.module("gameApp", [])
                 if (intervalPromise) {
                     $interval.cancel(intervalPromise);
                     intervalPromise = undefined;
-                }
+                }z
             });
         }
     }
