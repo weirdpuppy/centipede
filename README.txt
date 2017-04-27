@@ -26,14 +26,15 @@ Accessing the Project for code review:
 
 -----------------------------------------------------
 
-Developer Requirments: 
+Developer Requirements: 
 
 There are some things that you have to get situated
 before you can run this application.
 
 1. Create a developer account at:
    https://cast.google.com/publish/#/overview
-2. Make sure all hardware is in developer mode   
+2. Make sure all hardware is in developer mode and up
+   to date. 
 3. Register your chromecast device with the developer
    page above.
 4. Register the game with the developer page by 
@@ -43,3 +44,7 @@ before you can run this application.
 6. If all is setup correctly, the game should connect
    and work properly. 
    
+-----------------------------------------------------
+
+See Also:
+https://developers.google.com/cast/
