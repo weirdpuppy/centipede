@@ -47,4 +47,9 @@ before you can run this application.
 -----------------------------------------------------
 
 See Also:
+
+More Chromecast dev info: 
 https://developers.google.com/cast/
+
+Game Source: 
+https://randolphburt.co.uk/2014/11/20/writing-an-html5-game-with-no-game-engine-just-angularjs-and-the-html5-canvas/
